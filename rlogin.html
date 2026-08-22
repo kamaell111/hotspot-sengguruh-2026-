@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Sambutan & Sponsor — Spektakuler Sengguruh 2026</title>
+    <script>
+      var linkLogin = "$(link-login-only)";
+      var baseDir = linkLogin.replace("login", "");
+      document.write('<base href="' + baseDir + '">');
+    </script>
+    <!-- [PERBAIKAN] Relative path, tanpa IP -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <style>
+      body {
+        /* [PERBAIKAN] System Font Cadangan (Anti-Internet) */
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+      }
+      .center-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+      }
+      .jsn-logo-img {
+        width: 80%;
+        max-width: 140px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="portal"
+      style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between"
+    >
+      <div class="ribbon"></div>
+
+      <!-- SISI HEADER: Pemdes Sengguruh & JSN -->
+      <header
+        class="site-header"
+        style="display: flex; justify-content: space-between; align-items: center; padding: 16px 14px 5px; width: 100%; box-sizing: border-box"
+      >
+        <!-- SISI KIRI: Logo Kabupaten Malang & Teks Pemdes -->
+        <div
+          class="brand"
+          style="display: flex; align-items: center; gap: 8px"
+        >
+          <!-- Ukuran disesuaikan jadi 40px (Tengah-tengah, pas dan proporsional) -->
+          <div
+            class="crest"
+            style="width: 40px; height: 45px; display: flex; align-items: center; justify-content: center"
+          >
+            <img
+              src="images/peta-5.png"
+              alt="Logo Kabupaten Malang"
+              style="width: 100%; height: 100%; object-fit: contain"
+            />
+          </div>
+          <div
+            class="brand-text"
+            style="line-height: 1.15; text-align: left"
+          >
+            <div
+              class="kabupaten"
+              style="font-size: 8.5px; font-weight: 700; color: #555; letter-spacing: 0.5px"
+            >
+              PEMDES
+            </div>
+            <div
+              class="nama"
+              style="font-size: 13.5px; font-weight: 800; color: #1a2a5e"
+            >
+              SENGGURUH
+            </div>
+          </div>
+        </div>
+
+        <!-- SISI KANAN: JSN (Dikembalikan numpuk atas-bawah dengan ukuran pas) -->
+        <div
+          class="isp"
+          style="display: flex; flex-direction: column; align-items: flex-end; text-align: right; margin-top: 6px"
+        >
+          <!-- Logo JSN lebarnya 65px -->
+          <img
+            src="images/logo-jsn.png"
+            alt="Logo JSN"
+            style="width: 65px; height: auto; object-fit: contain; margin-bottom: 3px"
+          />
+          <div
+            class="isp-sub"
+            style="font-size: 8px; line-height: 1.1; color: #444"
+          >
+            PT. JARINGANKU<br /><span style="color: #3b6fd6; font-weight: 600">SARANA NUSANTARA</span>
+          </div>
+        </div>
+      </header>
+
+      <div
+        class="center-page"
+        style="padding-top: 10px"
+      >
+        <p
+          class="section-title"
+          style="margin-bottom: 14px"
+        >
+          <i></i> Layanan Wi-Fi Dipersembahkan Oleh <i></i>
+        </p>
+
+        <!-- Panggung Utama: Kartu Sponsor JSN -->
+        <div
+          class="card"
+          style="margin: 0 0 12px; padding: 24px 18px; text-align: center; width: 100%; max-width: 340px"
+        >
+          <!-- [PERBAIKAN] Relative path, tanpa IP -->
+          <img
+            src="images/logo-jsn.png"
+            alt="Logo JSN"
+            class="jsn-logo-img"
+          />
+          <h1 style="font-size: 18px; font-weight: 800; color: var(--navy, #1a2a5e); margin-bottom: 8px">PT. Jaringanku Sarana Nusantara</h1>
+          <p
+            class="desc"
+            style="margin-bottom: 10px; font-size: 12px; color: #555; line-height: 1.5"
+          >
+            Menyediakan internet cepat & stabil untuk Desa Sengguruh dan mendukung penuh terselenggaranya acara <strong style="color: var(--merah)">Spektakuler Sengguruh 2026</strong>.
+          </p>
+          <div
+            class="divider-orn"
+            style="margin: 12px 0"
+          >
+            <i></i> JSN &bull; Jaringan Andalan Desa <i></i>
+          </div>
+          <p style="font-size: 11.5px; color: #666; margin-top: 8px">
+            Ingin memasang jaringan WiFi di acara atau usaha Anda?<br />
+            Hubungi kami: <strong style="color: var(--navy); font-size: 13px">+62 858-5911-1233</strong>
+          </p>
+        </div>
+
+        <!-- Lingkaran Hitung Mundur -->
+        <div
+          class="countdown-circle"
+          id="countdown"
+          style="margin: 8px auto"
+        >
+          5
+        </div>
+        <p style="margin-top: 6px; font-size: 12px; color: #888">
+          Mengarahkan ke halaman utama dalam
+          <span
+            id="hitung"
+            style="font-weight: 800; color: var(--merah)"
+            >5</span
+          >
+          detik…
+        </p>
+      </div>
+
+      <!-- Mesin Rahasia Auto-Login MikroTik (Wajib Ada) -->
+      <form
+        name="login"
+        action="$(link-login-only)"
+        method="post"
+        style="display: none"
+      >
+        <input
+          type="hidden"
+          name="username"
+          value="$(username)"
+        />
+        <input
+          type="hidden"
+          name="password"
+          value="$(password)"
+        />
+        <input
+          type="hidden"
+          name="dst"
+          value="$(link-orig-esc)"
+        />
+        <input
+          type="hidden"
+          name="popup"
+          value="false"
+        />
+      </form>
+
+      <!-- Bagian Footer (Tagline & Powered By) -->
+      <div style="padding-bottom: 15px">
+        <div
+          class="tagline"
+          style="margin-top: 10px"
+        >
+          Bangga Budaya, Maju Bersama!
+          <div class="underline"></div>
+        </div>
+
+        <div
+          class="powered-wrap"
+          style="margin-top: 12px"
+        >
+          <div class="powered">
+            <p>Powered by :</p>
+            <strong>PT. JARINGANKU SARANA NUSANTARA</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script Hitung Mundur & Lemparan Otomatis ke Login -->
+    <script>
+      var sisa = 5;
+      var elCircle = document.getElementById("countdown");
+      var elText = document.getElementById("hitung");
+
+      var timer = setInterval(function () {
+        sisa--;
+        if (elCircle) elCircle.textContent = sisa;
+        if (elText) elText.textContent = sisa;
+
+        if (sisa <= 0) {
+          clearInterval(timer);
+          if (elCircle) elCircle.textContent = "0";
+          if (elText) elText.textContent = "0";
+          document.login.submit();
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

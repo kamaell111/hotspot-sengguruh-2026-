@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Spektakuler Sengguruh 2026 — Login WiFi</title>
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+
+    <script type="text/javascript">
+      function openModal(id) {
+        document.getElementById(id).classList.add("open");
+        if (id === "modal-info-acara") {
+          showInfoMenu("menu-jadwal");
+        }
+      }
+
+      function closeModal(id) {
+        document.getElementById(id).classList.remove("open");
+      }
+
+      function showInfoMenu(menuId) {
+        var contents = document.getElementsByClassName("info-menu-content");
+        for (var i = 0; i < contents.length; i++) {
+          contents[i].classList.remove("active");
+        }
+
+        var buttons = document.getElementsByClassName("info-menu-btn");
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove("active");
+        }
+
+        var selectedContent = document.getElementById(menuId);
+        if (selectedContent) {
+          selectedContent.classList.add("active");
+        }
+
+        var btn = document.querySelector('.info-menu-btn[data-target="' + menuId + '"]');
+        if (btn) {
+          btn.classList.add("active");
+        }
+      }
+
+      function openImage(src) {
+        if (typeof resetZoom === "function") resetZoom();
+        document.getElementById("preview-image").src = src;
+        document.getElementById("modal-gambar").classList.add("open");
+      }
+
+      function closeImage() {
+        document.getElementById("modal-gambar").classList.remove("open");
+        if (typeof resetZoom === "function") setTimeout(resetZoom, 300);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="portal">
+      <div class="ribbon"></div>
+
+      <!-- SISI HEADER: Pemdes Sengguruh & JSN -->
+      <header
+        class="site-header"
+        style="display: flex; justify-content: space-between; align-items: center; padding: 16px 14px 5px; width: 100%; box-sizing: border-box"
+      >
+        <!-- SISI KIRI: Logo Kabupaten Malang & Teks Pemdes -->
+        <div
+          class="brand"
+          style="display: flex; align-items: center; gap: 8px"
+        >
+          <!-- Ukuran disesuaikan jadi 40px (Tengah-tengah, pas dan proporsional) -->
+          <div
+            class="crest"
+            style="width: 40px; height: 45px; display: flex; align-items: center; justify-content: center"
+          >
+            <img
+              src="images/peta-5.png"
+              alt="Logo Kabupaten Malang"
+              style="width: 100%; height: 100%; object-fit: contain"
+            />
+          </div>
+          <div
+            class="brand-text"
+            style="line-height: 1.15; text-align: left"
+          >
+            <div
+              class="kabupaten"
+              style="font-size: 8.5px; font-weight: 700; color: #555; letter-spacing: 0.5px"
+            >
+              PEMDES
+            </div>
+            <div
+              class="nama"
+              style="font-size: 13.5px; font-weight: 800; color: #1a2a5e"
+            >
+              SENGGURUH
+            </div>
+          </div>
+        </div>
+
+        <!-- SISI KANAN: JSN (Dikembalikan numpuk atas-bawah dengan ukuran pas) -->
+        <div
+          class="isp"
+          style="display: flex; flex-direction: column; align-items: flex-end; text-align: right; margin-top: 6px"
+        >
+          <!-- Logo JSN lebarnya 65px -->
+          <img
+            src="images/logo-jsn.png"
+            alt="Logo JSN"
+            style="width: 65px; height: auto; object-fit: contain; margin-bottom: 3px"
+          />
+          <div
+            class="isp-sub"
+            style="font-size: 8px; line-height: 1.1; color: #444"
+          >
+            PT. JARINGANKU<br /><span style="color: #3b6fd6; font-weight: 600">SARANA NUSANTARA</span>
+          </div>
+        </div>
+      </header>
+      <!-- Maskot Topeng -->
+      <div class="mask-logo">
+        <svg
+          viewBox="0 0 260 130"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient
+              id="featherGrad"
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+              <stop
+                offset="0%"
+                stop-color="#E23B3B"
+              />
+              <stop
+                offset="100%"
+                stop-color="#A81616"
+              />
+            </linearGradient>
+          </defs>
+          <g
+            stroke="var(--emas)"
+            stroke-width="2"
+            fill="none"
+            opacity=".85"
+          >
+            <path d="M10 95 Q40 85 55 95 Q65 100 75 92" />
+            <path d="M250 95 Q220 85 205 95 Q195 100 185 92" />
+            <circle
+              cx="12"
+              cy="95"
+              r="2.5"
+              fill="var(--emas)"
+            />
+            <circle
+              cx="248"
+              cy="95"
+              r="2.5"
+              fill="var(--emas)"
+            />
+          </g>
+          <g>
+            <polygon
+              points="130,4 140,58 120,58"
+              fill="url(#featherGrad)"
+            />
+            <polygon
+              points="108,10 124,60 100,52"
+              fill="url(#featherGrad)"
+            />
+            <polygon
+              points="152,10 136,60 160,52"
+              fill="url(#featherGrad)"
+            />
+            <polygon
+              points="88,22 112,64 82,58"
+              fill="#C4281F"
+            />
+            <polygon
+              points="172,22 148,64 178,58"
+              fill="#C4281F"
+            />
+            <polygon
+              points="130,22 137,58 123,58"
+              fill="var(--putih)"
+              opacity=".8"
+            />
+          </g>
+          <rect
+            x="80"
+            y="60"
+            width="100"
+            height="10"
+            rx="5"
+            fill="var(--emas)"
+          />
+          <path
+            d="M78 70 Q130 52 182 70 Q186 92 130 100 Q74 92 78 70Z"
+            fill="var(--emas)"
+          />
+          <path
+            d="M85 72 Q130 58 175 72 Q178 88 130 94 Q82 88 85 72Z"
+            fill="var(--merah-tua)"
+          />
+          <ellipse
+            cx="105"
+            cy="76"
+            rx="11"
+            ry="7"
+            fill="var(--putih)"
+          />
+          <ellipse
+            cx="155"
+            cy="76"
+            rx="11"
+            ry="7"
+            fill="var(--putih)"
+          />
+          <ellipse
+            cx="105"
+            cy="76"
+            rx="3.5"
+            ry="7"
+            fill="var(--navy)"
+          />
+          <ellipse
+            cx="155"
+            cy="76"
+            rx="3.5"
+            ry="7"
+            fill="var(--navy)"
+          />
+          <polygon
+            points="130,80 126,88 134,88"
+            fill="var(--putih)"
+          />
+        </svg>
+      </div>
+
+      <!-- Teks Utama -->
+      <div style="position: relative; z-index: 4; text-align: center; padding: 0 20px; margin-top: 4px">
+        <!-- [PERBAIKAN] Font family diubah ke Impact & Arial Black -->
+        <h1
+          style="
+            font-family: &quot;Anton&quot;, Impact, &quot;Arial Black&quot;, sans-serif;
+            font-size: 28px;
+            line-height: 1;
+            letter-spacing: 1px;
+            background: linear-gradient(180deg, #e23b3b, #8b0f0f);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+          "
+        >
+          SPEKTAKULER
+        </h1>
+        <!-- [PERBAIKAN] Font family diubah ke Impact & Arial Black -->
+        <h2 style="font-family: &quot;Anton&quot;, Impact, &quot;Arial Black&quot;, sans-serif; font-size: 20px; line-height: 1; letter-spacing: 1px; color: #1a1a1a; margin-top: 2px">SENGGURUH 2026</h2>
+        <div
+          class="event-ribbon"
+          style="padding: 4px 14px; font-size: 10px"
+        >
+          KARNAVAL BUDAYA
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 6px">
+          <svg
+            style="width: 16px; height: 16px; fill: var(--merah)"
+            viewBox="0 0 24 24"
+          >
+            <path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.24 4.24 0 00-6 0zm-4-4l2 2a7.07 7.07 0 0110 0l2-2C15.14 9.14 8.87 9.14 5 13z" />
+          </svg>
+          <div style="font-weight: 800; font-size: 16px; color: var(--navy)">FREE <span style="color: var(--merah)">WiFi</span></div>
+          <svg
+            style="width: 16px; height: 16px; fill: var(--merah)"
+            viewBox="0 0 24 24"
+          >
+            <path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.24 4.24 0 00-6 0zm-4-4l2 2a7.07 7.07 0 0110 0l2-2C15.14 9.14 8.87 9.14 5 13z" />
+          </svg>
+        </div>
+      </div>
+
+      <div
+        class="card"
+        style="margin: 10px 16px 0; padding: 20px 16px 16px"
+      >
+        $(if error)
+        <div
+          class="alert"
+          style="margin-bottom: 16px; padding: 10px 12px; font-size: 11.5px"
+        >
+          <svg viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 5.5l6.7 11.5H5.3L12 7.5zM11 10v4h2v-4h-2zm0 5v2h2v-2h-2z" /></svg>
+          <span>$(error)</span>
+        </div>
+        $(endif)
+
+        <div style="text-align: center; margin-bottom: 14px">
+          <p style="font-size: 11.5px; font-weight: 500; color: #555; line-height: 1.4">Klik tombol di bawah ini untuk langsung terhubung ke jaringan internet gratis.</p>
+        </div>
+
+        <a
+          href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"
+          class="btn btn-primary"
+          style="height: 48px; font-size: 15px"
+        >
+          <svg viewBox="0 0 24 24"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.24 4.24 0 00-6 0zm-4-4l2 2a7.07 7.07 0 0110 0l2-2C15.14 9.14 8.87 9.14 5 13z" /></svg>
+          MULAI INTERNET GRATIS
+        </a>
+
+        <button
+          type="button"
+          onclick="openModal('modal-info-acara')"
+          class="btn btn-outline"
+          style="margin-top: 10px; height: 42px; font-size: 13px; border-color: var(--navy); color: var(--navy); width: 100%"
+        >
+          📌 Info Rute & Jadwal Lengkap
+        </button>
+      </div>
+
+      <div
+        class="powered-wrap"
+        style="padding: 6px 0 10px; margin-top: auto"
+      >
+        <div
+          class="powered"
+          style="min-width: auto; padding: 4px 10px"
+        >
+          <p>Powered by : <strong>PT. JSN</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL INFO (Jadwal, Rute, dll) -->
+    <div
+      class="modal-overlay"
+      id="modal-info-acara"
+    >
+      <div
+        class="modal-box"
+        style="max-height: 85vh; padding: 0; border-radius: 24px; width: 94%; display: flex; flex-direction: column"
+      >
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 8px; border-bottom: 1px solid #eee; background: #fff; border-radius: 24px 24px 0 0; flex-shrink: 0">
+          <h3 style="font-size: 18px; color: var(--navy); margin: 0">📌 Info Spektakuler 2026</h3>
+          <button
+            onclick="closeModal('modal-info-acara')"
+            style="background: var(--navy); color: white; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 16px; cursor: pointer"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div style="flex: 1; padding: 16px 20px; overflow-y: auto; min-height: 150px; max-height: 45vh; background: #f9f9f9">
+          <!-- MENU 1: JADWAL -->
+          <div
+            class="info-menu-content active"
+            id="menu-jadwal"
+          >
+            <div class="info-item"><strong>27 Agu (Gala Dinner)</strong><br />18.30 – 23.30 WIB, Jl. Krajan</div>
+            <div class="info-item"><strong>28 Agu (Check Sound)</strong><br />18.00 – 23.00 WIB, Jl. Raya</div>
+            <div class="info-item"><strong>29 Agu (Karnaval)</strong><br />10.00 – 23.00 WIB, Jl. Raya</div>
+            <!-- Kotak Peringatan Jadwal -->
+            <div style="background-color: #fff9e7; border-left: 4px solid #f5b041; padding: 12px 14px; border-radius: 6px; margin-top: 16px; font-size: 11.5px; color: #555; line-height: 1.5">
+              <strong>*Pemberitahuan:</strong> Jadwal dan rute acara dapat berubah sewaktu-waktu menyesuaikan kondisi cuaca dan arahan panitia di lapangan.
+            </div>
+          </div>
+
+          <!-- MENU 2: RUTE -->
+          <div
+            class="info-menu-content"
+            id="menu-rute"
+          >
+            <p style="font-size: 12px; color: #777; margin-bottom: 8px">Petunjuk rute karnaval & pengalihan arus</p>
+            <div class="map-grid">
+              <img
+                src="images/peta-1.png"
+                alt="Peta Rute 1"
+                onclick="openImage(this.src)"
+              />
+              <img
+                src="images/peta-2.png"
+                alt="Peta Rute 2"
+                onclick="openImage(this.src)"
+              />
+              <img
+                src="images/peta-3.png"
+                alt="Peta Rute 3"
+                onclick="openImage(this.src)"
+              />
+              <img
+                src="images/peta-4.png"
+                alt="Peta Rute 4"
+                onclick="openImage(this.src)"
+              />
+            </div>
+          </div>
+
+          <!-- MENU 3: CEK SOUND -->
+          <div
+            class="info-menu-content"
+            id="menu-ceksound"
+          >
+            <div class="info-item"><strong>Lokasi Cek Sound</strong><br />Panggung Utama — Jl. Raya Desa Sengguruh<br />28 Agustus, 18.00 – 23.00 WIB</div>
+            <div
+              class="info-item"
+              style="background: #fff6e5; border-left: 3px solid var(--emas)"
+            >
+              Warga sekitar dimohon maklum atas suara pengujian sound system pada jam tersebut di atas. Volume akan disesuaikan bertahap hingga level final H-1 acara puncak.
+            </div>
+          </div>
+
+          <!-- MENU 4: EVAKUASI -->
+          <div
+            class="info-menu-content"
+            id="menu-evakuasi"
+          >
+            <div class="info-item"><strong>📍 Titik Kumpul: Balai Desa</strong><br />Halaman Balai Desa Sengguruh<br /><span style="font-size: 11px; color: #777">(Dekat area Gala Dinner & Start Karnaval)</span></div>
+            <div class="info-item"><strong>📍 Titik Kumpul: Masjid Krajan</strong><br />Masjid Jl. Krajan<br /><span style="font-size: 11px; color: #777">(Dekat pertengahan rute karnaval)</span></div>
+            <div class="info-item"><strong>📍 Titik Kumpul: Lapangan SDN</strong><br />Lapangan SDN Sengguruh<br /><span style="font-size: 11px; color: #777">(Dekat panggung utama & area kepadatan tertinggi)</span></div>
+            <div
+              class="info-item"
+              style="border-left: 3px solid var(--hijau-aktif)"
+            >
+              <strong>🚪 Jalur Keluar Darurat</strong><br />Gang-gang kecil di sisi kanan-kiri Jl. Raya Desa Sengguruh telah ditandai petugas sebagai jalur evakuasi cepat.
+            </div>
+          </div>
+
+          <!-- MENU 5: ARUS LALIN -->
+          <div
+            class="info-menu-content"
+            id="menu-arus"
+          >
+            <div class="info-item"><strong>29 Agustus (10.00 – 23.00 WIB)</strong><br />Jl. Raya Desa Sengguruh <strong>ditutup total</strong> untuk kendaraan bermotor.</div>
+            <div class="info-item"><strong>Dari arah Utara</strong><br />Dialihkan melalui Jl. Krajan, tembus ke Jl. Alternatif Sengguruh.</div>
+            <div class="info-item"><strong>Dari arah Selatan</strong><br />Dialihkan melalui Jl. Alternatif Sengguruh menuju tujuan masing-masing.</div>
+            <div class="info-item"><strong>Area Larangan Parkir</strong><br />Sepanjang Jl. Raya Desa Sengguruh — parkir tersedia di area Balai Desa & Lapangan SDN.</div>
+            <div class="info-item"><strong>Kendaraan Darurat</strong><br />Tetap diprioritaskan melintas dengan pengawalan petugas.</div>
+            <div
+              class="info-item"
+              style="font-size: 11px; color: #777; border-left: 3px solid var(--merah)"
+            >
+              Mohon perhatikan rambu sementara dan arahan petugas gabungan (Satpol PP, Polisi, & panitia) di lapangan.
+            </div>
+          </div>
+
+          <!-- MENU 6: TENTANG ACARA -->
+          <div
+            class="info-menu-content"
+            id="menu-tentang"
+          >
+            <div class="info-item"><strong>Spektakuler Sengguruh 2026</strong><br />Karnaval budaya tahunan Desa Sengguruh dengan tema "Karnaval Budaya, Kreativitas Tanpa Batas".</div>
+            <div class="info-item">Acara menampilkan pawai kostum tradisional, gala dinner, serta pertunjukan seni sebagai wujud pelestarian budaya lokal.</div>
+            <div
+              class="info-item"
+              style="border-left: 3px solid var(--merah); font-weight: 600"
+            >
+              Didukung penuh oleh <span style="color: var(--merah)">PT. JSN</span> sebagai penyedia WiFi gratis.
+            </div>
+          </div>
+
+          <!-- MENU 7: DAFTAR SOUND SYSTEM -->
+          <div
+            class="info-menu-content"
+            id="menu-sound"
+          >
+            <div style="margin-bottom: 12px">
+              <p style="font-weight: 700; font-size: 14px; color: var(--navy); margin-bottom: 10px">🎵 Daftar Sound System yang Hadir</p>
+              <div style="background: #f8f9fa; border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center">
+                <div><strong style="color: var(--navy); font-size: 13px">Sengguruh Audio Squad</strong><br /><span style="font-size: 11px; color: #777">Panggung Utama</span></div>
+                <span style="background: #fdecec; color: var(--merah-tua); font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 10px">16.00–18.00</span>
+              </div>
+              <div style="background: #f8f9fa; border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center">
+                <div><strong style="color: var(--navy); font-size: 13px">Nusantara Beat Sound</strong><br /><span style="font-size: 11px; color: #777">Panggung Utama</span></div>
+                <span style="background: #fdecec; color: var(--merah-tua); font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 10px">18.00–20.00</span>
+              </div>
+              <div style="background: #f8f9fa; border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center">
+                <div><strong style="color: var(--navy); font-size: 13px">JSN Sound System</strong><br /><span style="font-size: 11px; color: #777">Panggung Utama — Sponsor Utama</span></div>
+                <span style="background: #fdecec; color: var(--merah-tua); font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 10px">20.00–22.00</span>
+              </div>
+              <div style="background: #f8f9fa; border-radius: 12px; padding: 12px 14px; display: flex; justify-content: space-between; align-items: center">
+                <div><strong style="color: var(--navy); font-size: 13px">Karnaval Ceria Audio</strong><br /><span style="font-size: 11px; color: #777">Panggung Utama — Penutup</span></div>
+                <span style="background: #fdecec; color: var(--merah-tua); font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 10px">22.00–23.00</span>
+              </div>
+              <p style="font-size: 10px; color: #888; margin-top: 10px">*Jadwal dapat berubah sewaktu-waktu menyesuaikan kondisi di lapangan.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: nowrap; overflow-x: auto; border-top: 1px solid #eee; background: #fff; border-radius: 0 0 24px 24px; flex-shrink: 0; padding: 4px 0; -webkit-overflow-scrolling: touch">
+          <button
+            class="info-menu-btn active"
+            data-target="menu-jadwal"
+            onclick="showInfoMenu('menu-jadwal')"
+            style="flex: 0 0 auto; padding: 8px 12px; border: none; background: transparent; font-weight: 600; font-size: 11px; color: #777; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap"
+          >
+            🗓️ Jadwal
+          </button>
+          <button
+            class="info-menu-btn"
+            data-target="menu-rute"
+            onclick="showInfoMenu('menu-rute')"
+            style="flex: 0 0 auto; padding: 8px 12px; border: none; background: transparent; font-weight: 600; font-size: 11px; color: #777; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap"
+          >
+            🚩 Rute
+          </button>
+          <button
+            class="info-menu-btn"
+            data-target="menu-ceksound"
+            onclick="showInfoMenu('menu-ceksound')"
+            style="flex: 0 0 auto; padding: 8px 12px; border: none; background: transparent; font-weight: 600; font-size: 11px; color: #777; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap"
+          >
+            🔊 Cek Sound
+          </button>
+          <button
+            class="info-menu-btn"
+            data-target="menu-evakuasi"
+            onclick="showInfoMenu('menu-evakuasi')"
+            style="flex: 0 0 auto; padding: 8px 12px; border: none; background: transparent; font-weight: 600; font-size: 11px; color: #777; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap"
+          >
+            🛟 Evakuasi
+          </button>
+          <button
+            class="info-menu-btn"
+            data-target="menu-arus"
+            onclick="showInfoMenu('menu-arus')"
+            style="flex: 0 0 auto; padding: 8px 12px; border: none; background: transparent; font-weight: 600; font-size: 11px; color: #777; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap"
+          >
+            🚦 Arus
+          </button>
+          <button
+            class="info-menu-btn"
+            data-target="menu-tentang"
+            onclick="showInfoMenu('menu-tentang')"
+            style="flex: 0 0 auto; padding: 8px 12px; border: none; background: transparent; font-weight: 600; font-size: 11px; color: #777; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap"
+          >
+            ℹ️ Tentang
+          </button>
+          <button
+            class="info-menu-btn"
+            data-target="menu-sound"
+            onclick="showInfoMenu('menu-sound')"
+            style="flex: 0 0 auto; padding: 8px 12px; border: none; background: transparent; font-weight: 600; font-size: 11px; color: #777; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap"
+          >
+            🎵 Sound
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL PERBESAR GAMBAR PETA (DENGAN MESIN ZOOM) -->
+    <div
+      class="modal-overlay"
+      id="modal-gambar"
+      style="background: rgba(0, 0, 0, 0.85) !important"
+    >
+      <div
+        class="modal-box"
+        style="background: transparent !important; box-shadow: none !important; padding: 0 !important; max-height: none !important; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; overflow: hidden"
+      >
+        <button
+          onclick="closeImage()"
+          style="position: absolute; top: 20px; right: 20px; background: rgba(0, 0, 0, 0.6); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 24px; z-index: 10; cursor: pointer"
+        >
+          ✕
+        </button>
+        <img
+          id="preview-image"
+          src=""
+          alt="Peta Perbesar"
+          style="width: 100%; max-width: 100%; height: auto; max-height: 90vh; object-fit: contain; border-radius: 10px; touch-action: none; transform-origin: center center"
+        />
+      </div>
+    </div>
+
+    <!-- SCRIPT MESIN ZOOM (PINCH & DRAG) -->
+    <script>
+      document.querySelectorAll(".modal-overlay").forEach(function (ov) {
+        ov.addEventListener("click", function (e) {
+          if (e.target === ov) {
+            ov.classList.remove("open");
+            if (ov.id === "modal-gambar" && typeof resetZoom === "function") {
+              setTimeout(resetZoom, 300);
+            }
+          }
+        });
+      });
+
+      var imgPreview = document.getElementById("preview-image");
+      var scale = 1,
+        panning = false,
+        pointX = 0,
+        pointY = 0,
+        startX = 0,
+        startY = 0;
+      var initialDistance = 0,
+        initialScale = 1;
+
+      function resetZoom() {
+        scale = 1;
+        pointX = 0;
+        pointY = 0;
+        imgPreview.style.transition = "transform 0.3s ease";
+        imgPreview.style.transform = "translate(0px, 0px) scale(1)";
+      }
+
+      function setTransform() {
+        imgPreview.style.transition = "none";
+        imgPreview.style.transform = "translate(" + pointX + "px, " + pointY + "px) scale(" + scale + ")";
+      }
+
+      imgPreview.addEventListener("touchstart", function (e) {
+        if (e.touches.length === 2) {
+          initialDistance = Math.hypot(e.touches[0].pageX - e.touches[1].pageX, e.touches[0].pageY - e.touches[1].pageY);
+          initialScale = scale;
+        } else if (e.touches.length === 1) {
+          panning = true;
+          startX = e.touches[0].pageX - pointX;
+          startY = e.touches[0].pageY - pointY;
+        }
+      });
+
+      imgPreview.addEventListener("touchmove", function (e) {
+        e.preventDefault();
+        if (e.touches.length === 2) {
+          var currentDistance = Math.hypot(e.touches[0].pageX - e.touches[1].pageX, e.touches[0].pageY - e.touches[1].pageY);
+          scale = initialScale * (currentDistance / initialDistance);
+          scale = Math.min(Math.max(1, scale), 4);
+          setTransform();
+        } else if (e.touches.length === 1 && panning && scale > 1) {
+          pointX = e.touches[0].pageX - startX;
+          pointY = e.touches[0].pageY - startY;
+          setTransform();
+        }
+      });
+
+      imgPreview.addEventListener("touchend", function (e) {
+        panning = false;
+        if (scale < 1) resetZoom();
+      });
+    </script>
+    <!-- SCRIPT PENERJEMAH ERROR MIKROTIK -->
+    <script>
+      var errorSpan = document.querySelector(".alert span");
+      if (errorSpan) {
+        var pesanError = errorSpan.innerText.toLowerCase();
+
+        // Jika MikroTik mengeluh soal waktu habis (uptime limit)
+        if (pesanError.includes("uptime limit")) {
+          errorSpan.innerText = "Maaf, batas waktu penggunaan internet gratis Anda telah habis.";
+        }
+        // Jika MikroTik mengeluh soal kuota habis (byte limit) - buat jaga-jaga
+        else if (pesanError.includes("byte limit") || pesanError.includes("download limit")) {
+          errorSpan.innerText = "Maaf, batas kuota penggunaan internet gratis Anda telah habis.";
+        }
+      }
+    </script>
+  </body>
+</html>
